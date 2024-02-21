@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
- 
+#define PB push_back
+
 using namespace std;
  
 int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     int n, k;
     vector<int> res;
     int t;
@@ -19,7 +22,7 @@ int main() {
             if(k%2==0)
             {
                 res.push_back((k/2));
-            } else res.push_back(ceil((k/2))+1);
+            } else res.PB(ceil((k/2))+1);
         }
     }
     for(size_t i=0;i<res.size();i++)

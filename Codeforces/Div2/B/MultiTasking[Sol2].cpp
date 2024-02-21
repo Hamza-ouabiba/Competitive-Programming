@@ -1,8 +1,12 @@
 #include <bits/stdc++.h>
- 
+#define IN insert
+#define PB push_back
+
 using namespace std;
  
 int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     vector<int> a;
     int ai;
     set<pair<int, int>> p;
@@ -15,7 +19,7 @@ int main() {
       for(int i=0;i<m;i++)
       {
         cin>>ai;
-        a.push_back(ai);
+        a.PB(ai);
       }
       //for ascending order :
       if(k == 0)
@@ -26,7 +30,7 @@ int main() {
           {
             if(a[i] > a[j])
             {
-              p.insert({i+1,j+1});
+              p.IN({i+1,j+1});
             } 
           }
         }
@@ -40,7 +44,7 @@ int main() {
           {
             if(a[i] < a[j] )
             {
-              p.insert({j+1,i+1});
+              p.IN({j+1,i+1});
             } 
           }
         }
