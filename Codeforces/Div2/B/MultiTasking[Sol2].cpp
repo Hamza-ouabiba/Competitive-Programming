@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define IN insert
-#define PB push_back
+#define Pb push_back
 
 using namespace std;
  
@@ -19,7 +19,7 @@ int main() {
       for(int i=0;i<m;i++)
       {
         cin>>ai;
-        a.PB(ai);
+        a.Pb(ai);
       }
       //for ascending order :
       if(k == 0)
