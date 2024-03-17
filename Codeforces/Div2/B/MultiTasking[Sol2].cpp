@@ -22,33 +22,23 @@ int main() {
         a.Pb(ai);
       }
       //for ascending order :
-      if(k == 0)
-      {
         for(int i=0;i<m;i++)
         {
           for(int j=i+1;j<m;j++)
           {
-            if(a[i] > a[j])
-            {
-              p.IN({i+1,j+1});
-            } 
+            if(k == 0) {
+              if(a[i] > a[j])
+              {
+                p.IN({i+1,j+1});
+              } 
+            } else {
+              if(a[i] < a[j])
+              {
+                p.IN({j+1,i+1});
+              } 
+            }
           }
         }
-
-      } else 
-      {
-          //for descending order :
-        for(int i=0;i<m;i++)
-        {
-          for(int j=i+1;j<m;j++)
-          {
-            if(a[i] < a[j] )
-            {
-              p.IN({j+1,i+1});
-            } 
-          }
-        }
-      }
     }
     cout<<p.size()<<'\n';
     for(auto elm : p)

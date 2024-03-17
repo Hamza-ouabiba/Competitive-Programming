@@ -1,34 +1,21 @@
 #include <bits/stdc++.h>
- 
+#define IN insert
+#define Pb push_back
+
 using namespace std;
  
 int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     int t;
-    int count1=0;
-    int count2=0;
-    string ch;
-    vector<char> a;
+
     cin >> t;
- 
-    while(t--)
-    {
-      count1=0;
-      count2=0;
-       cin >> ch;
-       for(size_t i=0;i<ch.length();i++)
-       {
-          if(ch[i] == 'A')
-            count1++;
-          else count2++;
-       }
- 
-       (count1 > count2 ? a.push_back('A') : a.push_back('B'));
+
+    while(t--) {
+      string ch;
+      cin >> ch;
+
+      count(ch.begin(),ch.end(),'A') >= 3 ? cout<<'A'<<'\n' : cout<<'B'<<'\n';
     }
- 
-    for(size_t i=0;i<a.size();i++)
-    {
-      cout<<a[i]<<"\n";
-    }
- 
     return 0;
 }
