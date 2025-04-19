@@ -50,9 +50,7 @@ int main() {
         if(p[0].first <= n) {
             sh = p[0].first*p[0].second;
         } else 
-        {
             sh = (p[0].first-n)*p[0].second;
-        }
     };
     cout<<sh;
     return 0;
